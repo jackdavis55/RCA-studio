@@ -1,0 +1,4181 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "RCA-001",
+      "title": "Plant feed interruption",
+      "description": "Synthetic demonstration of procedural initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-10T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "Bypass step omitted",
+          "description": "Fictional case detail: Bypass step omitted",
+          "category": "procedural",
+          "role": "trigger",
+          "time": "2026-05-10T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Standby pump unavailable",
+          "description": "Fictional case detail: Standby pump unavailable",
+          "category": "equipment",
+          "role": "condition",
+          "time": "2026-05-10T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-10T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Feed pump trips",
+          "description": "Fictional case detail: Feed pump trips",
+          "category": "equipment",
+          "role": "event",
+          "time": "2026-05-10T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Loss of process flow",
+          "description": "Fictional case detail: Loss of process flow",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-10T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Plant shutdown",
+          "description": "Fictional case detail: Plant shutdown",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-10T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-10T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-10T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Lightning interference",
+          "description": "Fictional case detail: Lightning interference",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-10T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-10T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-10T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "Bypass step omitted record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Bypass step omitted",
+          "time": "2026-05-10T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Standby pump unavailable record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Standby pump unavailable",
+          "time": "2026-05-10T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Feed pump trips record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Feed pump trips",
+          "time": "2026-05-10T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Loss of process flow record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Loss of process flow",
+          "time": "2026-05-10T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Plant shutdown record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Plant shutdown",
+          "time": "2026-05-10T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-10T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-10T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Lightning interference record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Lightning interference",
+          "time": "2026-05-10T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-10T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "supported",
+        "equipment": "confirmed",
+        "environmental": "ruled-out",
+        "human": "hypothesis",
+        "external": "unassessed",
+        "organisational": "hypothesis",
+        "software": "unassessed",
+        "design": "unassessed"
+      }
+    },
+    {
+      "id": "RCA-002",
+      "title": "Cooling system failure",
+      "description": "Synthetic demonstration of equipment initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-11T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "Bearing degradation",
+          "description": "Fictional case detail: Bearing degradation",
+          "category": "equipment",
+          "role": "trigger",
+          "time": "2026-05-11T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Vibration alarm missed",
+          "description": "Fictional case detail: Vibration alarm missed",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-11T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-11T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Cooling pump trips",
+          "description": "Fictional case detail: Cooling pump trips",
+          "category": "equipment",
+          "role": "event",
+          "time": "2026-05-11T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Cooling flow lost",
+          "description": "Fictional case detail: Cooling flow lost",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-11T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Reactor safe shutdown",
+          "description": "Fictional case detail: Reactor safe shutdown",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-11T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-11T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-11T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Lightning interference",
+          "description": "Fictional case detail: Lightning interference",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-11T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-11T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-11T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "Bearing degradation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Bearing degradation",
+          "time": "2026-05-11T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Vibration alarm missed record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Vibration alarm missed",
+          "time": "2026-05-11T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Cooling pump trips record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Cooling pump trips",
+          "time": "2026-05-11T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Cooling flow lost record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Cooling flow lost",
+          "time": "2026-05-11T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Reactor safe shutdown record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Reactor safe shutdown",
+          "time": "2026-05-11T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-11T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-11T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Lightning interference record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Lightning interference",
+          "time": "2026-05-11T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-11T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "unassessed",
+        "equipment": "supported",
+        "environmental": "ruled-out",
+        "human": "unassessed",
+        "external": "unassessed",
+        "organisational": "unassessed",
+        "software": "unassessed",
+        "design": "unassessed"
+      }
+    },
+    {
+      "id": "RCA-003",
+      "title": "Flooded electrical room",
+      "description": "Synthetic demonstration of environmental initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-12T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "Heavy rainfall",
+          "description": "Fictional case detail: Heavy rainfall",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-12T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Drain capacity reduced",
+          "description": "Fictional case detail: Drain capacity reduced",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-12T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-12T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Water enters switchroom",
+          "description": "Fictional case detail: Water enters switchroom",
+          "category": "equipment",
+          "role": "event",
+          "time": "2026-05-12T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Electrical supply interrupted",
+          "description": "Fictional case detail: Electrical supply interrupted",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-12T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Facility shutdown",
+          "description": "Fictional case detail: Facility shutdown",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-12T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-12T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-12T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Operator misrouting",
+          "description": "Fictional case detail: Operator misrouting",
+          "category": "human",
+          "role": "trigger",
+          "time": "2026-05-12T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-12T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-12T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "Heavy rainfall record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Heavy rainfall",
+          "time": "2026-05-12T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Drain capacity reduced record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Drain capacity reduced",
+          "time": "2026-05-12T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Water enters switchroom record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Water enters switchroom",
+          "time": "2026-05-12T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Electrical supply interrupted record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Electrical supply interrupted",
+          "time": "2026-05-12T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Facility shutdown record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Facility shutdown",
+          "time": "2026-05-12T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-12T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-12T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Operator misrouting record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Operator misrouting",
+          "time": "2026-05-12T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-12T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "unassessed",
+        "equipment": "unassessed",
+        "environmental": "supported",
+        "human": "ruled-out",
+        "external": "unassessed",
+        "organisational": "unassessed",
+        "software": "unassessed",
+        "design": "unassessed"
+      }
+    },
+    {
+      "id": "RCA-004",
+      "title": "Incorrect material transfer",
+      "description": "Synthetic demonstration of human initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-13T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "Shift handover incomplete",
+          "description": "Fictional case detail: Shift handover incomplete",
+          "category": "human",
+          "role": "trigger",
+          "time": "2026-05-13T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Valve lineup not verified",
+          "description": "Fictional case detail: Valve lineup not verified",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-13T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-13T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Wrong valve opened",
+          "description": "Fictional case detail: Wrong valve opened",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-13T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Material routed incorrectly",
+          "description": "Fictional case detail: Material routed incorrectly",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-13T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Transfer stopped",
+          "description": "Fictional case detail: Transfer stopped",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-13T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-13T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-13T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Lightning interference",
+          "description": "Fictional case detail: Lightning interference",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-13T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-13T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-13T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "Shift handover incomplete record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Shift handover incomplete",
+          "time": "2026-05-13T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Valve lineup not verified record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Valve lineup not verified",
+          "time": "2026-05-13T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Wrong valve opened record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Wrong valve opened",
+          "time": "2026-05-13T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Material routed incorrectly record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Material routed incorrectly",
+          "time": "2026-05-13T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Transfer stopped record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Transfer stopped",
+          "time": "2026-05-13T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-13T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-13T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Lightning interference record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Lightning interference",
+          "time": "2026-05-13T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-13T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "unassessed",
+        "equipment": "unassessed",
+        "environmental": "ruled-out",
+        "human": "supported",
+        "external": "unassessed",
+        "organisational": "unassessed",
+        "software": "unassessed",
+        "design": "unassessed"
+      }
+    },
+    {
+      "id": "RCA-005",
+      "title": "Utility interruption",
+      "description": "Synthetic demonstration of external initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-14T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "External grid outage",
+          "description": "Fictional case detail: External grid outage",
+          "category": "external",
+          "role": "trigger",
+          "time": "2026-05-14T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Backup supply unavailable",
+          "description": "Fictional case detail: Backup supply unavailable",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-14T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-14T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Incoming feeder trips",
+          "description": "Fictional case detail: Incoming feeder trips",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-14T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Power lost",
+          "description": "Fictional case detail: Power lost",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-14T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Production interrupted",
+          "description": "Fictional case detail: Production interrupted",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-14T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-14T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-14T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Lightning interference",
+          "description": "Fictional case detail: Lightning interference",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-14T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-14T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-14T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "External grid outage record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: External grid outage",
+          "time": "2026-05-14T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Backup supply unavailable record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Backup supply unavailable",
+          "time": "2026-05-14T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Incoming feeder trips record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Incoming feeder trips",
+          "time": "2026-05-14T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Power lost record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Power lost",
+          "time": "2026-05-14T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Production interrupted record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production interrupted",
+          "time": "2026-05-14T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-14T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-14T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Lightning interference record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Lightning interference",
+          "time": "2026-05-14T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-14T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "unassessed",
+        "equipment": "unassessed",
+        "environmental": "ruled-out",
+        "human": "unassessed",
+        "external": "supported",
+        "organisational": "unassessed",
+        "software": "unassessed",
+        "design": "unassessed"
+      }
+    },
+    {
+      "id": "RCA-006",
+      "title": "Inspection backlog",
+      "description": "Synthetic demonstration of organisational initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-15T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "Inspection resources reduced",
+          "description": "Fictional case detail: Inspection resources reduced",
+          "category": "organisational",
+          "role": "trigger",
+          "time": "2026-05-15T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Inspection overdue",
+          "description": "Fictional case detail: Inspection overdue",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-15T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-15T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Corrosion discovered",
+          "description": "Fictional case detail: Corrosion discovered",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-15T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Pipe isolated",
+          "description": "Fictional case detail: Pipe isolated",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-15T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Process unavailable",
+          "description": "Fictional case detail: Process unavailable",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-15T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-15T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-15T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Lightning interference",
+          "description": "Fictional case detail: Lightning interference",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-15T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-15T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-15T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "Inspection resources reduced record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Inspection resources reduced",
+          "time": "2026-05-15T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Inspection overdue record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Inspection overdue",
+          "time": "2026-05-15T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Corrosion discovered record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Corrosion discovered",
+          "time": "2026-05-15T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Pipe isolated record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Pipe isolated",
+          "time": "2026-05-15T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Process unavailable record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Process unavailable",
+          "time": "2026-05-15T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-15T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-15T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Lightning interference record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Lightning interference",
+          "time": "2026-05-15T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-15T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "unassessed",
+        "equipment": "unassessed",
+        "environmental": "ruled-out",
+        "human": "unassessed",
+        "external": "unassessed",
+        "organisational": "supported",
+        "software": "unassessed",
+        "design": "unassessed"
+      }
+    },
+    {
+      "id": "RCA-007",
+      "title": "Control system upset",
+      "description": "Synthetic demonstration of software initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-16T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "Incorrect controller configuration",
+          "description": "Fictional case detail: Incorrect controller configuration",
+          "category": "software",
+          "role": "trigger",
+          "time": "2026-05-16T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Change review incomplete",
+          "description": "Fictional case detail: Change review incomplete",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-16T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-16T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Controller output saturates",
+          "description": "Fictional case detail: Controller output saturates",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-16T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Pressure deviation",
+          "description": "Fictional case detail: Pressure deviation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-16T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Protective shutdown",
+          "description": "Fictional case detail: Protective shutdown",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-16T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-16T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-16T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Lightning interference",
+          "description": "Fictional case detail: Lightning interference",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-16T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-16T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-16T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "Incorrect controller configuration record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Incorrect controller configuration",
+          "time": "2026-05-16T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Change review incomplete record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Change review incomplete",
+          "time": "2026-05-16T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Controller output saturates record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Controller output saturates",
+          "time": "2026-05-16T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Pressure deviation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Pressure deviation",
+          "time": "2026-05-16T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Protective shutdown record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Protective shutdown",
+          "time": "2026-05-16T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-16T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-16T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Lightning interference record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Lightning interference",
+          "time": "2026-05-16T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-16T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "unassessed",
+        "equipment": "unassessed",
+        "environmental": "ruled-out",
+        "human": "unassessed",
+        "external": "unassessed",
+        "organisational": "unassessed",
+        "software": "supported",
+        "design": "unassessed"
+      }
+    },
+    {
+      "id": "RCA-008",
+      "title": "Ventilation deficiency",
+      "description": "Synthetic demonstration of design initiation with parallel contributing factors.",
+      "fictional": true,
+      "timezone": "UTC",
+      "topEventId": "top",
+      "events": [
+        {
+          "id": "normal",
+          "title": "Normal operation",
+          "description": "Fictional case detail: Normal operation",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-17T08:00:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-normal"
+          ]
+        },
+        {
+          "id": "latent",
+          "title": "Earlier control weakness",
+          "description": "Fictional case detail: Earlier control weakness",
+          "category": "organisational",
+          "role": "condition",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "unknown",
+          "evidenceIds": [
+            "E-latent"
+          ]
+        },
+        {
+          "id": "trigger",
+          "title": "Undersized ventilation design",
+          "description": "Fictional case detail: Undersized ventilation design",
+          "category": "design",
+          "role": "trigger",
+          "time": "2026-05-17T08:10:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "condition",
+          "title": "Design review gap",
+          "description": "Fictional case detail: Design review gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-17T08:12:00Z",
+          "timePrecision": "range",
+          "status": "supported",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-condition"
+          ],
+          "endTime": "2026-05-17T08:23:00Z"
+        },
+        {
+          "id": "intermediate",
+          "title": "Fan capacity exceeded",
+          "description": "Fictional case detail: Fan capacity exceeded",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-17T08:24:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "upset",
+          "title": "Temperature rises",
+          "description": "Fictional case detail: Temperature rises",
+          "category": "process",
+          "role": "event",
+          "time": "2026-05-17T08:27:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-upset"
+          ]
+        },
+        {
+          "id": "top",
+          "title": "Equipment shutdown",
+          "description": "Fictional case detail: Equipment shutdown",
+          "category": "process",
+          "role": "top-event",
+          "time": "2026-05-17T08:31:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-top"
+          ]
+        },
+        {
+          "id": "impact",
+          "title": "Production loss",
+          "description": "Fictional case detail: Production loss",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-17T08:35:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-impact"
+          ]
+        },
+        {
+          "id": "safe",
+          "title": "Safe isolation achieved",
+          "description": "Fictional case detail: Safe isolation achieved",
+          "category": "consequence",
+          "role": "consequence",
+          "time": "2026-05-17T08:33:00Z",
+          "timePrecision": "exact",
+          "status": "confirmed",
+          "occurrence": "observed",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "potential",
+          "title": "Further equipment damage",
+          "description": "Fictional case detail: Further equipment damage",
+          "category": "consequence",
+          "role": "consequence",
+          "time": null,
+          "timePrecision": "unknown",
+          "status": "hypothesis",
+          "occurrence": "prevented",
+          "evidenceIds": [
+            "E-potential"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "Lightning interference",
+          "description": "Fictional case detail: Lightning interference",
+          "category": "environmental",
+          "role": "trigger",
+          "time": "2026-05-17T08:15:00Z",
+          "timePrecision": "exact",
+          "status": "ruled-out",
+          "occurrence": "not-observed",
+          "evidenceIds": [
+            "E-alternative"
+          ]
+        },
+        {
+          "id": "handover",
+          "title": "Possible communication gap",
+          "description": "Fictional case detail: Possible communication gap",
+          "category": "human",
+          "role": "condition",
+          "time": "2026-05-17T08:05:00Z",
+          "timePrecision": "exact",
+          "status": "hypothesis",
+          "occurrence": "possible",
+          "evidenceIds": [
+            "E-handover"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "id": "l1",
+          "source": "trigger",
+          "target": "condition",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-trigger",
+            "E-condition"
+          ]
+        },
+        {
+          "id": "l2",
+          "source": "condition",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-condition",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l3",
+          "source": "intermediate",
+          "target": "upset",
+          "type": "contributes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-intermediate",
+            "E-upset"
+          ]
+        },
+        {
+          "id": "l4",
+          "source": "upset",
+          "target": "top",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-upset",
+            "E-top"
+          ]
+        },
+        {
+          "id": "l5",
+          "source": "top",
+          "target": "impact",
+          "type": "causes",
+          "status": "confirmed",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-impact"
+          ]
+        },
+        {
+          "id": "l6",
+          "source": "top",
+          "target": "safe",
+          "type": "causes",
+          "status": "supported",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-top",
+            "E-safe"
+          ]
+        },
+        {
+          "id": "l7",
+          "source": "latent",
+          "target": "trigger",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-latent",
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "l8",
+          "source": "alternative",
+          "target": "intermediate",
+          "type": "contributes",
+          "status": "ruled-out",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-alternative",
+            "E-intermediate"
+          ]
+        },
+        {
+          "id": "l9",
+          "source": "handover",
+          "target": "condition",
+          "type": "contributes",
+          "status": "hypothesis",
+          "rationale": "Illustrative causal assessment; verify against linked evidence.",
+          "evidenceIds": [
+            "E-handover",
+            "E-condition"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "id": "E-normal",
+          "title": "Normal operation record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Normal operation",
+          "time": "2026-05-17T08:00:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-latent",
+          "title": "Earlier control weakness record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Earlier control weakness",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-trigger",
+          "title": "Undersized ventilation design record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Undersized ventilation design",
+          "time": "2026-05-17T08:10:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-condition",
+          "title": "Design review gap record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Design review gap",
+          "time": "2026-05-17T08:12:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-intermediate",
+          "title": "Fan capacity exceeded record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Fan capacity exceeded",
+          "time": "2026-05-17T08:24:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-upset",
+          "title": "Temperature rises record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Temperature rises",
+          "time": "2026-05-17T08:27:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-top",
+          "title": "Equipment shutdown record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Equipment shutdown",
+          "time": "2026-05-17T08:31:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-impact",
+          "title": "Production loss record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Production loss",
+          "time": "2026-05-17T08:35:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-safe",
+          "title": "Safe isolation achieved record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Safe isolation achieved",
+          "time": "2026-05-17T08:33:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-potential",
+          "title": "Further equipment damage record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Further equipment damage",
+          "time": null,
+          "reliability": "Illustrative only; unverified"
+        },
+        {
+          "id": "E-alternative",
+          "title": "Lightning interference record",
+          "source": "Fictional investigation record",
+          "observation": "Synthetic observation: Lightning interference",
+          "time": "2026-05-17T08:15:00Z",
+          "reliability": "Illustrative only; simulated record"
+        },
+        {
+          "id": "E-handover",
+          "title": "Possible communication gap record",
+          "source": "Fictional investigation record",
+          "observation": "Candidate explanation requiring verification: Possible communication gap",
+          "time": "2026-05-17T08:05:00Z",
+          "reliability": "Illustrative only; unverified"
+        }
+      ],
+      "barriers": [
+        {
+          "id": "b1",
+          "title": "Primary preventive check",
+          "role": "preventive",
+          "status": "failed",
+          "owner": "Operations",
+          "evidenceIds": [
+            "E-trigger"
+          ]
+        },
+        {
+          "id": "b2",
+          "title": "Backup readiness check",
+          "role": "preventive",
+          "status": "degraded",
+          "owner": "Maintenance",
+          "evidenceIds": [
+            "E-condition"
+          ]
+        },
+        {
+          "id": "b3",
+          "title": "Protective isolation",
+          "role": "mitigative",
+          "status": "effective",
+          "owner": "Safety engineering",
+          "evidenceIds": [
+            "E-safe"
+          ]
+        },
+        {
+          "id": "b4",
+          "title": "Damage limitation control",
+          "role": "mitigative",
+          "status": "unknown",
+          "owner": "Engineering",
+          "evidenceIds": []
+        }
+      ],
+      "pathways": [
+        {
+          "id": "p1",
+          "threatId": "trigger",
+          "barrierIds": [
+            "b1",
+            "b2"
+          ],
+          "side": "left"
+        },
+        {
+          "id": "p2",
+          "threatId": "alternative",
+          "barrierIds": [],
+          "side": "left"
+        },
+        {
+          "id": "p3",
+          "consequenceId": "safe",
+          "barrierIds": [
+            "b3"
+          ],
+          "side": "right"
+        },
+        {
+          "id": "p4",
+          "consequenceId": "impact",
+          "barrierIds": [],
+          "side": "right"
+        },
+        {
+          "id": "p5",
+          "consequenceId": "potential",
+          "barrierIds": [
+            "b4"
+          ],
+          "side": "right"
+        }
+      ],
+      "gates": [
+        {
+          "id": "g1",
+          "operator": "AND",
+          "inputIds": [
+            "condition",
+            "intermediate"
+          ],
+          "outputId": "upset",
+          "status": "hypothesis",
+          "rationale": "Working model: both conditions required; not established."
+        },
+        {
+          "id": "g2",
+          "operator": "OR",
+          "inputIds": [
+            "trigger",
+            "handover"
+          ],
+          "outputId": "condition",
+          "status": "hypothesis",
+          "rationale": "Alternative candidate explanations; sufficiency not yet verified."
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "title": "Review and improve preventive control",
+          "targetType": "barrier",
+          "targetId": "b1",
+          "owner": "Operations lead",
+          "dueDate": "2026-12-15",
+          "status": "open",
+          "rationale": "Address the identified control weakness."
+        },
+        {
+          "id": "a2",
+          "title": "Verify competing causal explanations",
+          "targetType": "link",
+          "targetId": "l9",
+          "owner": "Investigator",
+          "dueDate": null,
+          "status": "in-progress",
+          "rationale": "Collect evidence before accepting the hypothesis."
+        }
+      ],
+      "categoryAssessments": {
+        "procedural": "unassessed",
+        "equipment": "unassessed",
+        "environmental": "ruled-out",
+        "human": "unassessed",
+        "external": "unassessed",
+        "organisational": "unassessed",
+        "software": "unassessed",
+        "design": "supported"
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "events": [
+    {
+      "id": "reviewed-roster",
+      "category": "organisational",
+      "title": "Maintenance deferral recorded",
+      "time": "2026-05-10T07:52:00Z",
+      "status": "supported",
+      "description": "The planning log records a deferral. Its relationship to pump availability remains under review.",
+      "role": "condition",
+      "timePrecision": "exact",
+      "occurrence": "observed",
+      "evidenceIds": [
+        "E-reviewed-roster"
+      ]
+    },
+    {
+      "id": "design-arrangement",
+      "category": "design",
+      "title": "Standby isolation arrangement checked",
+      "time": "2026-05-10T07:56:00Z",
+      "status": "unassessed",
+      "description": "The walkdown records the arrangement in use. Its contribution to the shutdown has yet to be assessed.",
+      "role": "condition",
+      "timePrecision": "exact",
+      "occurrence": "observed",
+      "evidenceIds": [
+        "E-design-arrangement"
+      ]
+    },
+    {
+      "id": "utility-advisory",
+      "category": "external",
+      "title": "Utility voltage advisory received",
+      "time": "2026-05-10T08:18:00Z",
+      "status": "unassessed",
+      "description": "Receipt of the advisory was recorded. Local equipment impact remains unassessed.",
+      "role": "condition",
+      "timePrecision": "exact",
+      "occurrence": "observed",
+      "evidenceIds": [
+        "E-utility-advisory"
+      ]
+    },
+    {
+      "id": "software-alarm",
+      "category": "software",
+      "title": "Alarm display refresh delayed",
+      "time": "2026-05-10T08:21:00Z",
+      "status": "hypothesis",
+      "description": "Investigators are assessing whether the display delay affected operator response.",
+      "role": "condition",
+      "timePrecision": "exact",
+      "occurrence": "observed",
+      "evidenceIds": [
+        "E-software-alarm"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-reviewed-roster",
+      "title": "Maintenance deferral recorded record",
+      "time": "2026-05-10T07:52:00Z",
+      "source": "Maintenance planning log",
+      "observation": "The signed morning exception sheet deferred standby pump service pending parts.",
+      "reliability": "Fictional contemporaneous record. Causal relevance requires corroboration."
+    },
+    {
+      "id": "E-design-arrangement",
+      "title": "Standby isolation arrangement checked record",
+      "time": "2026-05-10T07:56:00Z",
+      "source": "Engineering walkdown notes",
+      "observation": "The shift engineer recorded the standby isolation arrangement before startup.",
+      "reliability": "Fictional contemporaneous record. Causal relevance requires corroboration."
+    },
+    {
+      "id": "E-utility-advisory",
+      "title": "Utility voltage advisory received record",
+      "time": "2026-05-10T08:18:00Z",
+      "source": "Utility operating bulletin",
+      "observation": "The control room received a bulletin for a possible upstream voltage disturbance.",
+      "reliability": "Fictional contemporaneous record. Causal relevance requires corroboration."
+    },
+    {
+      "id": "E-software-alarm",
+      "title": "Alarm display refresh delayed record",
+      "time": "2026-05-10T08:21:00Z",
+      "source": "Operator console audit log",
+      "observation": "The console audit showed delayed display updates during the shift.",
+      "reliability": "Fictional contemporaneous record. Causal relevance requires corroboration."
+    }
+  ]
+}
